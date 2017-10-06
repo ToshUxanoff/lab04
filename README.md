@@ -44,7 +44,7 @@ $ g++ example2.o print.a -o example2
 $ ./example2
 $ cat log.txt && echo  #проверка работы example2 (запись в файле log.txt)
 ```
-Удаление объектных файлов, статич
+Удаление объектных файлов, статических библиотек
 ```ShellSession
 $ rm -rf example1.o example2.o print.o 
 $ rm -rf print.a 
@@ -126,6 +126,17 @@ $ cat CMakeLists.txt
 $ cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
 $ cmake --build _build --target install
 $ tree _install
+```
+``` _install
+├── cmake
+│ ├── print-config-noconfig.cmake
+│ └── print-config.cmake
+├── include
+│ └── print.hpp
+└── lib
+└── libprint.a
+
+3 directories, 4 files
 ```
 Коммит изменений
 ```ShellSession
